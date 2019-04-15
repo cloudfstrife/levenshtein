@@ -8,36 +8,30 @@ import (
 func Levenshtein(a, b string) float64 {
 	r1 := []rune(a)
 	r2 := []rune(b)
-	len1 := len(r1)
-	len2 := len(r2)
 
-	matrix := make([][]float64, 0, len1+1)
-
-	for i := 0; i < len1+1; i++ {
-		dlist := make([]float64, 0, len2+1)
-		if i == 0 {
-			for j := 0; j < len2+1; j++ {
-				dlist = append(dlist, float64(j))
+	matrix := make([][]float64, 0, len(r1)+1)
+	for i := 0; i < len(r1)+1; i++ {
+		line := make([]float64, 0, len(r2)+1)
+		for j := 0; j < len(r2)+1; j++ {
+			if i == 0 {
+				line = append(line, float64(j))
+				continue
 			}
-		} else {
-			dlist = append(dlist, float64(i))
-		}
-		matrix = append(matrix, dlist)
-	}
-
-	for i := 1; i <= len1; i++ {
-		for j := 1; j <= len2; j++ {
+			if j == 0 {
+				line = append(line, float64(i))
+				continue
+			}
 			var c float64
 			if r1[i-1] != r2[j-1] {
 				c = 1
 			}
-
-			val := math.Min(math.Min(matrix[i-1][j-1]+c, matrix[i][j-1]+1), matrix[i-1][j]+1)
-			matrix[i] = append(matrix[i], val)
+			val := math.Min(math.Min(matrix[i-1][j-1]+c, line[j-1]+1), matrix[i-1][j]+1)
+			line = append(line, val)
 		}
+		matrix = append(matrix, line)
 	}
 
-	return matrix[len1][len2]
+	return matrix[len(r1)][len(r2)]
 }
 
 //SimilarDegree 字符串相似度
