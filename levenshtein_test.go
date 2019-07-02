@@ -54,3 +54,28 @@ func TestSimilarDegree(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkLevenshtein(b *testing.B) {
+	testCases := map[string]struct {
+		a    string
+		b    string
+		want int
+	}{
+		"First Word Empty":                   {"", "levenshtein", 11},
+		"Second Word Empty":                  {"levenshtein", "", 11},
+		"UNEqual":                            {"levenshtein", "levenTESTCASE", 8},
+		"Equal":                              {"hello", "hello", 0},
+		"Chinese Word":                       {"你好世界", "晚安世界", 2},
+		"First Word include Second Word - 1": {"你好世界", "世界", 2},
+		"First Word include Second Word - 2": {"你好世界", "你好", 2},
+		"Second Word include First Word - 1": {"世界", "晚安世界", 2},
+		"Second Word include First Word - 2": {"晚安", "晚安世界", 2},
+	}
+	for name, testCase := range testCases {
+		b.Run(name, func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				Levenshtein(testCase.a, testCase.b)
+			}
+		})
+	}
+}
