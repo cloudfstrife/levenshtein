@@ -21,29 +21,31 @@ func Levenshtein(a, b string) int {
 		return len(r1)
 	}
 
-	matrix := make([][]int, 0, len(r1)+1)
+	line := make([]int, 0, len(r2)+1)
+	nook := 0
 	for i := 0; i < len(r1)+1; i++ {
-		line := make([]int, 0, len(r2)+1)
 		for j := 0; j < len(r2)+1; j++ {
 			if i == 0 {
 				line = append(line, j)
 				continue
 			}
 			if j == 0 {
-				line = append(line, i)
+				nook = i - 1
+				line[0] = i
 				continue
 			}
-			var c int
+			oval := line[j]
+
+			var v int
 			if r1[i-1] != r2[j-1] {
-				c = 1
+				v = 1
 			}
-			val := min(matrix[i-1][j-1]+c, line[j-1]+1, matrix[i-1][j]+1)
-			line = append(line, val)
+			line[j] = min(nook+v, line[j-1]+1, oval+1)
+			nook = oval
 		}
-		matrix = append(matrix, line)
 	}
 
-	return matrix[len(r1)][len(r2)]
+	return line[len(r2)]
 }
 
 //SimilarDegree 字符串相似度
