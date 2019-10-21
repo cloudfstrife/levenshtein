@@ -1,3 +1,3 @@
 module github.com/cloudfstrife/levenshtein
 
-go 1.12
+go 1.13
