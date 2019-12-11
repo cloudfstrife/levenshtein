@@ -13,3 +13,6 @@
 
 # VS Code Config
 .vscode
+
+#Sonar Scanner
+.scannerwork

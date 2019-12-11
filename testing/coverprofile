@@ -1,0 +1,22 @@
+mode: set
+github.com/cloudfstrife/levenshtein/levenshtein.go:8.35,9.12 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:13.2,16.18 3 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:20.2,20.18 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:24.2,26.33 3 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:48.2,48.22 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:9.12,11.3 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:16.18,18.3 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:20.18,22.3 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:26.33,27.34 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:27.34,28.14 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:32.4,32.14 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:37.4,40.26 3 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:43.4,44.15 2 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:28.14,30.13 2 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:32.14,35.13 3 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:40.26,42.5 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:52.41,54.2 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:57.24,59.22 2 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:64.2,64.10 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:59.22,60.12 1 1
+github.com/cloudfstrife/levenshtein/levenshtein.go:60.12,62.4 1 1
