@@ -1,0 +1,11 @@
+{"Time":"2019-12-12T18:55:29.94496+08:00","Action":"run","Package":"github.com/cloudfstrife/levenshtein","Test":"TestLevenshtein"}
+{"Time":"2019-12-12T18:55:29.975879+08:00","Action":"output","Package":"github.com/cloudfstrife/levenshtein","Test":"TestLevenshtein","Output":"=== RUN   TestLevenshtein\n"}
+{"Time":"2019-12-12T18:55:29.975879+08:00","Action":"output","Package":"github.com/cloudfstrife/levenshtein","Test":"TestLevenshtein","Output":"--- PASS: TestLevenshtein (0.00s)\n"}
+{"Time":"2019-12-12T18:55:29.975879+08:00","Action":"pass","Package":"github.com/cloudfstrife/levenshtein","Test":"TestLevenshtein","Elapsed":0}
+{"Time":"2019-12-12T18:55:29.975879+08:00","Action":"run","Package":"github.com/cloudfstrife/levenshtein","Test":"TestSimilarDegree"}
+{"Time":"2019-12-12T18:55:29.9768764+08:00","Action":"output","Package":"github.com/cloudfstrife/levenshtein","Test":"TestSimilarDegree","Output":"=== RUN   TestSimilarDegree\n"}
+{"Time":"2019-12-12T18:55:29.9768764+08:00","Action":"output","Package":"github.com/cloudfstrife/levenshtein","Test":"TestSimilarDegree","Output":"--- PASS: TestSimilarDegree (0.00s)\n"}
+{"Time":"2019-12-12T18:55:29.9768764+08:00","Action":"pass","Package":"github.com/cloudfstrife/levenshtein","Test":"TestSimilarDegree","Elapsed":0}
+{"Time":"2019-12-12T18:55:29.9768764+08:00","Action":"output","Package":"github.com/cloudfstrife/levenshtein","Output":"PASS\n"}
+{"Time":"2019-12-12T18:55:29.9768764+08:00","Action":"output","Package":"github.com/cloudfstrife/levenshtein","Output":"ok  \tgithub.com/cloudfstrife/levenshtein\t0.223s\n"}
+{"Time":"2019-12-12T18:55:29.9768764+08:00","Action":"pass","Package":"github.com/cloudfstrife/levenshtein","Elapsed":0.223}
